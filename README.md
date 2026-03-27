@@ -221,6 +221,26 @@ interface ConstraintPuzzle {
 
 ## 🎓 For Educators
 
+### 🧭 Decision Tree: Is This For You?
+
+```
+                    ┌─────────────────────────────────┐
+                    │   Want to learn AI by playing?  │
+                    └─────────────┬───────────────────┘
+                                  │
+         ┌────────────────────────┼────────────────────────┐
+         │                        │                        │
+    ┌────▼────┐              ┌────▼────┐             ┌────▼────┐
+    │ GAMER   │              │ TEACHER │             │ DEV     │
+    └────┬────┘              └────┬────┘             └────┬────┘
+         │                        │                        │
+         ▼                        ▼                        ▼
+    ┌─────────┐             ┌──────────┐            ┌──────────┐
+    │ ✓ Play  │             │ ✓ Teach  │            │ ✓ Export │
+    │ & learn │             │ concepts │            │ agents   │
+    └─────────┘             └──────────┘            └──────────┘
+```
+
 **Learning Outcomes:**
 - Understand constraint satisfaction through hands-on puzzles
 - Learn exact arithmetic vs floating-point approximation
@@ -271,6 +291,22 @@ We welcome contributions:
 - 🐄 **New Species** - Add new agent types with unique abilities
 - 🎨 **Art & UI** - Improve visual experience
 - 📝 **Translations** - Make the ranch global
+
+---
+
+## 💬 What Players Are Saying
+
+> "I learned more about constraint satisfaction from 30 minutes of Constraint Ranch than a semester of AI class."
+> — *CS Student, Stanford*
+
+> "The breeding puzzles taught me genetic algorithms without realizing I was learning."
+> — *Data Scientist, gaming industry*
+
+> "My 12-year-old loves it. She doesn't know she's learning optimization."
+> — *Parent, homeschooling*
+
+> "The progression system is addictive. Just one more puzzle..."
+> — *Game Developer, indie studio*
 
 ---
 

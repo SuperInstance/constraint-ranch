@@ -1,6 +1,6 @@
 // Puzzle type definitions for Constraint Ranch
 
-export type PuzzleType = 'spatial' | 'routing' | 'breeding' | 'coordination';
+export type PuzzleType = 'spatial' | 'routing' | 'breeding' | 'coordination' | 'advanced';
 
 export interface Constraint {
   type: string;
@@ -116,8 +116,29 @@ export interface CoordinationPuzzle extends BasePuzzle {
   goalState: Constraint[];
 }
 
+export interface AdvancedPuzzle extends BasePuzzle {
+  type: 'advanced';
+  subPuzzles: Array<{
+    type: PuzzleType;
+    puzzle: ConstraintPuzzle;
+    dependencies?: string[];
+  }>;
+  initialState: {
+    agents: Array<{
+      id: string;
+      species: string;
+      position: Position;
+      traits: Map<string, number>;
+    }>;
+    resources: Record<string, number>;
+    globalConstraints: Constraint[];
+  };
+  goalState: Constraint[];
+}
+
 export type ConstraintPuzzle = 
   | SpatialPuzzle 
   | RoutingPuzzle 
   | BreedingPuzzle 
-  | CoordinationPuzzle;
+  | CoordinationPuzzle
+  | AdvancedPuzzle;

@@ -2,6 +2,7 @@
 
 > **Breed. Train. Coordinate. A gamified multi-agent system with constraint-based puzzles.**
 
+[![GitHub stars](https://img.shields.io/github/stars/SuperInstance/constraint-ranch?style=social)](https://github.com/SuperInstance/constraint-ranch)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Discord](https://img.shields.io/discord/your-server?color=7289da)](https://discord.gg/constraint-ranch)
 
@@ -9,33 +10,28 @@
 
 ---
 
-## What Is This?
+## 🎯 What Is This?
 
 A **gamified AI ecosystem** where you breed, train, and coordinate AI agents through constraint-based puzzles. Built on [Constraint Theory](https://github.com/SuperInstance/constraint-theory-core) for exact geometric positioning and deterministic agent coordination.
 
----
-
-## The Ah-Ha Moment
-
-**Traditional AI platforms:**
 ```
-"Configure your LLM parameters, set temperature to 0.7, 
-choose a model, write system prompts..."
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│   🎮 Traditional AI: "Configure temperature to 0.7..."     │
+│                      (Hours of trial and error)            │
+│                                                             │
+│   🐔 Constraint Ranch: Start with 3 chickens               │
+│                        Solve puzzles, unlock species       │
+│                        Learn AI by playing!                │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
 ```
-*Hours of configuration. Trial and error. No fun.*
-
-**Constraint Ranch:**
-```
-1. Start with 3 Chickens 🐔
-2. Solve puzzles to unlock new species
-3. Breed agents with specific traits
-4. Watch them coordinate with exact precision
-```
-*Learn by playing. AI concepts become intuitive.*
 
 ---
 
-## Quick Start (30 Seconds)
+## 🚀 Quick Start (30 Seconds)
+
+**Prerequisites:** Node.js 18+, npm 9+
 
 ```bash
 # Clone and play
@@ -47,9 +43,20 @@ npm install && npm run dev
 # Your ranch awaits! 🤠
 ```
 
+**Or play online:** [constraint-ranch.superinstance.ai](https://constraint-ranch.superinstance.ai)
+
+**Troubleshooting:**
+```bash
+# Port 3000 in use?
+npm run dev -- --port 3001
+
+# npm install failing?
+rm -rf node_modules package-lock.json && npm install
+```
+
 ---
 
-## Gameplay Overview
+## 🎮 Gameplay Overview
 
 ### 🎯 Core Loop
 
@@ -67,7 +74,7 @@ npm install && npm run dev
 └─────────────────────────────────────────────────────┘
 ```
 
-### 🐄 Agent Species
+### 🐄 Agent Species (8 Types)
 
 | Species | Size | Specialty | Unlock Level |
 |---------|------|-----------|--------------|
@@ -80,9 +87,9 @@ npm install && npm run dev
 | 🦅 **Falcon** | 5MB | Multi-node Sync | 30 |
 | 🐗 **Hog** | 10MB | Hardware GPIO | 35 |
 
-### 🧩 Puzzle Types
+### 🧩 Puzzle Types (3 Categories)
 
-#### Spatial Puzzles
+#### Spatial Puzzles 📍
 Position agents optimally using exact geometric coordinates:
 ```
 Goal: Place 5 agents such that:
@@ -93,7 +100,7 @@ Goal: Place 5 agents such that:
 Solution: Dodecet-encoded positions guarantee exact placement
 ```
 
-#### Routing Puzzles
+#### Routing Puzzles 🔀
 Route tasks to correct agents using constraint satisfaction:
 ```
 Incoming: 1000 tasks/minute
@@ -103,7 +110,7 @@ Incoming: 1000 tasks/minute
 └── Constraint: No agent exceeds 80% capacity
 ```
 
-#### Breeding Puzzles
+#### Breeding Puzzles 🧬
 Create agents with specific trait combinations:
 ```
 Target: Agent with {polite: 0.9, concise: 0.7, technical: 0.5}
@@ -114,7 +121,7 @@ Target: Agent with {polite: 0.9, concise: 0.7, technical: 0.5}
 
 ---
 
-## Why Constraint Theory?
+## 💡 Why Constraint Theory?
 
 Traditional game AI uses floating-point math, leading to:
 
@@ -138,7 +145,51 @@ Collision: NO (deterministic)
 
 ---
 
-## Technical Architecture
+## 📈 Progression System
+
+### Levels & Unlocks
+
+| Level | Title | Unlocks |
+|-------|-------|---------|
+| 1-4 | Ranch Hand | 🐔 Chickens, Basic puzzles |
+| 5-9 | Drover | 🦆 Ducks, Routing puzzles |
+| 10-14 | Trail Boss | 🐐 Goats, Debug tools |
+| 15-19 | Wrangler | 🐑 Sheep, Consensus puzzles |
+| 20-24 | Rancher | 🐄 Cattle, Heavy reasoning |
+| 25-29 | Overseer | 🐴 Horses, Pipeline automation |
+| 30-34 | Trailblazer | 🦅 Falcons, Multi-node sync |
+| 35+ | Ranch Master | All species, Night School breeding |
+
+### Achievements
+
+- 🥇 **Perfect Score**: Solve puzzle with optimal solution
+- 🏃 **Speed Run**: Complete level in under 5 minutes
+- 🧬 **Master Breeder**: Create agent with 0.95+ fitness
+- 🤝 **Coordinator**: Successfully route 10,000 tasks
+- 📊 **Analyst**: Export agent to production environment
+
+---
+
+## 🚀 Export to Production
+
+Trained agents can be exported to:
+
+```bash
+# Export to pasture-ai
+constraint-ranch export cattle-email-v1 --format=pasture-ai
+
+# Export to constraint-flow (business)
+constraint-ranch export duck-api-v2 --format=constraint-flow
+
+# Export as breed.md (universal)
+constraint-ranch export sheep-consensus-v1 --format=breed
+```
+
+**Your trained agents work in real systems.**
+
+---
+
+## 🏗️ Technical Architecture
 
 ```typescript
 // Game State
@@ -168,32 +219,22 @@ interface ConstraintPuzzle {
 
 ---
 
-## Progression System
+## 🎓 For Educators
 
-### Levels & Unlocks
+**Learning Outcomes:**
+- Understand constraint satisfaction through hands-on puzzles
+- Learn exact arithmetic vs floating-point approximation
+- Experience multi-agent coordination patterns
+- Practice optimization and resource allocation
 
-| Level | Title | Unlocks |
-|-------|-------|---------|
-| 1-4 | Ranch Hand | 🐔 Chickens, Basic puzzles |
-| 5-9 | Drover | 🦆 Ducks, Routing puzzles |
-| 10-14 | Trail Boss | 🐐 Goats, Debug tools |
-| 15-19 | Wrangler | 🐑 Sheep, Consensus puzzles |
-| 20-24 | Rancher | 🐄 Cattle, Heavy reasoning |
-| 25-29 | Overseer | 🐴 Horses, Pipeline automation |
-| 30-34 | Trailblazer | 🦅 Falcons, Multi-node sync |
-| 35+ | Ranch Master | All species, Night School breeding |
-
-### Achievements
-
-- 🥇 **Perfect Score**: Solve puzzle with optimal solution
-- 🏃 **Speed Run**: Complete level in under 5 minutes
-- 🧬 **Master Breeder**: Create agent with 0.95+ fitness
-- 🤝 **Coordinator**: Successfully route 10,000 tasks
-- 📊 **Analyst**: Export agent to production environment
+**Classroom Use:**
+- Works in any browser — no installation needed
+- Progressive difficulty for different skill levels
+- Export agents for real-world applications
 
 ---
 
-## Monetization (Fair Play)
+## 💰 Monetization (Fair Play)
 
 | Feature | Free | Premium |
 |---------|------|---------|
@@ -208,26 +249,7 @@ interface ConstraintPuzzle {
 
 ---
 
-## Export to Production
-
-Trained agents can be exported to:
-
-```bash
-# Export to pasture-ai
-constraint-ranch export cattle-email-v1 --format=pasture-ai
-
-# Export to constraint-flow (business)
-constraint-ranch export duck-api-v2 --format=constraint-flow
-
-# Export as breed.md (universal)
-constraint-ranch export sheep-consensus-v1 --format=breed
-```
-
-**Your trained agents work in real systems.**
-
----
-
-## Ecosystem
+## 🌟 Ecosystem
 
 | Repo | What It Does |
 |------|--------------|
@@ -239,7 +261,9 @@ constraint-ranch export sheep-consensus-v1 --format=breed
 
 ---
 
-## Contributing
+## 🤝 Contributing
+
+**[Good First Issues](https://github.com/SuperInstance/constraint-ranch/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)** · **[CONTRIBUTING.md](CONTRIBUTING.md)**
 
 We welcome contributions:
 
@@ -248,14 +272,18 @@ We welcome contributions:
 - 🎨 **Art & UI** - Improve visual experience
 - 📝 **Translations** - Make the ranch global
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
-
 ---
 
-## License
+## 📜 License
 
 MIT — see [LICENSE](LICENSE).
 
 ---
 
+<div align="center">
+
 **Ready to run your ranch? Let's play! 🤠**
+
+**[Star this repo](https://github.com/SuperInstance/constraint-ranch)** · **[Play Now](https://constraint-ranch.superinstance.ai)**
+
+</div>

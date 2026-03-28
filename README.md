@@ -419,22 +419,6 @@ We welcome contributions:
 
 ---
 
-## 💬 What Players Are Saying
-
-> "I learned more about constraint satisfaction from 30 minutes of Constraint Ranch than a semester of AI class."
-> — *CS Student, Stanford*
-
-> "The breeding puzzles taught me genetic algorithms without realizing I was learning."
-> — *Data Scientist, gaming industry*
-
-> "My 12-year-old loves it. She doesn't know she's learning optimization."
-> — *Parent, homeschooling*
-
-> "The progression system is addictive. Just one more puzzle..."
-> — *Game Developer, indie studio*
-
----
-
 ## 📜 License
 
 MIT — see [LICENSE](LICENSE).

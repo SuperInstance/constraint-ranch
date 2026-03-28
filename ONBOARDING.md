@@ -171,7 +171,61 @@ Constraint.exactly(n, conditions);       // Exactly n must be true
 Constraint.implication(a, b);            // If a then b
 ```
 
-### 3. Puzzle Types
+### 3. Hidden Dimensions (Advanced Concept)
+
+Constraint Ranch implements the **Grand Unified Constraint Theory (GUCT)** for exact constraint satisfaction. This is what makes the game mathematically precise:
+
+#### The Hidden Dimension Formula
+
+```
+Hidden Dimensions:  k = ⌈log₂(1/ε)⌉
+
+Where:
+- k = number of hidden dimensions
+- ε = desired precision (e.g., 1e-10 for 10 decimal places)
+```
+
+**What This Means:**
+- To achieve exact constraint satisfaction at precision 1e-10, we need k = 34 hidden dimensions
+- Hidden dimensions encode the residual error that enables exact reconstruction
+- This is why positions "snap" to exact Pythagorean coordinates
+
+#### Pythagorean Snapping
+
+All positions snap to a **Pythagorean lattice** for exact arithmetic:
+
+```typescript
+import { snapToLattice, defaultLattice } from 'constraint-ranch/engine';
+
+// Snap a position to nearest Pythagorean coordinates
+const result = snapToLattice(0.6, 0.8, defaultLattice);
+
+// Result: (3/5, 4/5) - exact Pythagorean triple 3-4-5
+console.log(result.position.visible);
+console.log(result.pythagoreanTriple); // [3, 4, 5]
+```
+
+#### Holonomy Verification
+
+Constraint systems are verified for consistency using **holonomy checking**:
+
+```typescript
+import { verifyHolonomy, encodeWithHiddenDimensions } from 'constraint-ranch/engine';
+
+// Encode positions with hidden dimensions
+const positions = [
+  encodeWithHiddenDimensions(0.6, 0.8),
+  encodeWithHiddenDimensions(0.8, 0.6),
+];
+
+// Check if constraint system is consistent
+const result = verifyHolonomy(positions);
+console.log(result.isConsistent); // true if all cycles have zero holonomy
+```
+
+> 📘 **See [MASTER_INTEGRATION_SCHEMA.md](../../research/MASTER_INTEGRATION_SCHEMA.md)** for the complete mathematical foundation.
+
+### 4. Puzzle Types
 
 Constraint Ranch features **5 puzzle types** that teach different AI concepts:
 

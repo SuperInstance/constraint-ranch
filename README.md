@@ -365,13 +365,15 @@ This game is built on [Constraint Theory](https://github.com/SuperInstance/const
 
 Constraint Ranch is part of the Constraint Theory ecosystem:
 
-| Repo | What It Does | Connection to Ranch |
-|------|--------------|---------------------|
-| **[constraint-theory-core](https://github.com/SuperInstance/constraint-theory-core)** | Rust crate - exact arithmetic | Powers exact positioning & snapping |
-| **[constraint-theory-python](https://github.com/SuperInstance/constraint-theory-python)** | Python bindings | For analysis and research |
-| **[constraint-ranch](https://github.com/SuperInstance/constraint-ranch)** | This repo - Gamified AI | Learn by playing! |
-| **[constraint-flow](https://github.com/SuperInstance/constraint-flow)** | Business automation | Export agents to workflows |
-| **[pasture-ai](https://github.com/SuperInstance/pasture-ai)** | Production agent system | Deploy trained agents |
+| Repo | What It Does | Key Features |
+|------|--------------|--------------|
+| **[constraint-theory-core](https://github.com/SuperInstance/constraint-theory-core)** | 🦀 Rust crate | ~100ns snap, SIMD batch, 82 tests |
+| **[constraint-theory-python](https://github.com/SuperInstance/constraint-theory-python)** | 🐍 Python bindings | NumPy integration, PyTorch compatible |
+| **[constraint-theory-web](https://github.com/SuperInstance/constraint-theory-web)** | 🌐 Interactive demos | 50 visualizations, zero setup |
+| **[constraint-theory-research](https://github.com/SuperInstance/constraint-theory-research)** | 📚 Mathematical foundations | arXiv paper, proofs, open problems |
+| **[constraint-ranch](https://github.com/SuperInstance/constraint-ranch)** | 🎮 This repo | Puzzle games, agent breeding |
+| **[constraint-flow](https://github.com/SuperInstance/constraint-flow)** | 💼 Business automation | Exact financial calculations, workflow orchestration |
+| **[constraint-theory-agent](https://github.com/SuperInstance/constraint-theory-agent)** | 🤖 Implementation agent | Code audit, refactoring, expert explanations |
 
 ### Workflow Integration
 

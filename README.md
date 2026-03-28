@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Discord](https://img.shields.io/discord/your-server?color=7289da)](https://discord.gg/constraint-ranch)
 
-🌐 **Play Now:** [constraint-ranch.superinstance.ai](https://constraint-ranch.superinstance.ai)
+🌐 **Play Now:** [constraint-theory-web.pages.dev](https://constraint-theory-web.pages.dev)
 
 ---
 
@@ -43,7 +43,7 @@ npm install && npm run dev
 # Your ranch awaits! 🤠
 ```
 
-**Or play online:** [constraint-ranch.superinstance.ai](https://constraint-ranch.superinstance.ai)
+**Or play online:** [constraint-theory-web.pages.dev](https://constraint-theory-web.pages.dev)
 
 **Troubleshooting:**
 ```bash
@@ -429,6 +429,6 @@ MIT — see [LICENSE](LICENSE).
 
 **Ready to run your ranch? Let's play! 🤠**
 
-**[Star this repo](https://github.com/SuperInstance/constraint-ranch)** · **[Play Now](https://constraint-ranch.superinstance.ai)**
+**[Star this repo](https://github.com/SuperInstance/constraint-ranch)** · **[Play Now](https://constraint-theory-web.pages.dev)**
 
 </div>

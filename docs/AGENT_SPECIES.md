@@ -2,6 +2,10 @@
 
 This document provides detailed information about all agent species in Constraint Ranch.
 
+> **Related:** [GAME_DESIGN.md](./GAME_DESIGN.md) | [PUZZLE_FORMAT.md](./PUZZLE_FORMAT.md) | [ARCHITECTURE.md](./ARCHITECTURE.md)
+>
+> **Ecosystem:** [constraint-theory-core](https://github.com/SuperInstance/constraint-theory-core) | [pasture-ai](https://github.com/SuperInstance/pasture-ai)
+
 ---
 
 ## Overview

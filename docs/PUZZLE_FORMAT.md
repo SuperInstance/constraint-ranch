@@ -2,6 +2,8 @@
 
 This document defines the standard format for all puzzles in Constraint Ranch.
 
+> **Related:** See [ARCHITECTURE.md](./ARCHITECTURE.md) for technical implementation details, and [GAME_DESIGN.md](./GAME_DESIGN.md) for game mechanics.
+
 ---
 
 ## Base Puzzle Interface

@@ -74,20 +74,25 @@ rm -rf node_modules package-lock.json && npm install
 └─────────────────────────────────────────────────────┘
 ```
 
+<!-- 📸 Screenshot placeholder: Main ranch overview showing agents and puzzles -->
+> **Screenshot:** *Main ranch view with agent collection and puzzle selection* (see [assets/screenshots](./assets/screenshots/))
+
 ### 🐄 Agent Species (8 Types)
 
-| Species | Size | Specialty | Unlock Level |
-|---------|------|-----------|--------------|
-| 🐔 **Chicken** | 5MB | Monitoring, Alerts | 1 (Starter) |
-| 🦆 **Duck** | 100MB | API, Network | 5 |
-| 🐐 **Goat** | 150MB | Debug, Navigation | 10 |
-| 🐑 **Sheep** | 50MB | Consensus Voting | 15 |
-| 🐄 **Cattle** | 500MB | Heavy Reasoning | 20 |
-| 🐴 **Horse** | 200MB | Pipeline ETL | 25 |
-| 🦅 **Falcon** | 5MB | Multi-node Sync | 30 |
-| 🐗 **Hog** | 10MB | Hardware GPIO | 35 |
+| Species | Size | Specialty | Unlock Level | Tier |
+|---------|------|-----------|--------------|------|
+| 🐔 **Chicken** | 5MB | Monitoring, Alerts | 1 (Starter) | Starter |
+| 🦆 **Duck** | 100MB | API, Network | 5 | Network |
+| 🐐 **Goat** | 150MB | Debug, Navigation | 10 | Network |
+| 🐑 **Sheep** | 50MB | Consensus Voting | 15 | Network |
+| 🐄 **Cattle** | 500MB | Heavy Reasoning | 20 | Heavy |
+| 🐴 **Horse** | 200MB | Pipeline ETL | 25 | Heavy |
+| 🦅 **Falcon** | 5MB | Multi-node Sync | 30 | Specialty |
+| 🐗 **Hog** | 10MB | Hardware GPIO | 35 | Specialty |
 
-### 🧩 Puzzle Types (3 Categories)
+> 📘 **See [Agent Species Documentation](./docs/AGENT_SPECIES.md)** for detailed trait ranges, breeding compatibility, and strategy tips for each species.
+
+### 🧩 Puzzle Types (5 Categories)
 
 #### Spatial Puzzles 📍
 Position agents optimally using exact geometric coordinates:
@@ -100,6 +105,8 @@ Goal: Place 5 agents such that:
 Solution: Dodecet-encoded positions guarantee exact placement
 ```
 
+**Key Constraints:** `max-distance`, `min-coverage`, `agent-count`, `on-perimeter`, `even-spacing`
+
 #### Routing Puzzles 🔀
 Route tasks to correct agents using constraint satisfaction:
 ```
@@ -110,6 +117,8 @@ Incoming: 1000 tasks/minute
 └── Constraint: No agent exceeds 80% capacity
 ```
 
+**Key Constraints:** `max-capacity`, `all-tasks-routed`, `optimal-routing`, `max-latency`
+
 #### Breeding Puzzles 🧬
 Create agents with specific trait combinations:
 ```
@@ -118,6 +127,43 @@ Target: Agent with {polite: 0.9, concise: 0.7, technical: 0.5}
 ├── Parent B: {polite: 1.0, concise: 0.9, technical: 0.1}
 └── Breed strategy: Select gene weights for target
 ```
+
+**Key Constraints:** `trait-threshold`, `trait-match`, `generations`, `trait-exceeds-parents`
+
+#### Coordination Puzzles 🤝
+Multi-agent collaboration and consensus:
+```
+Task: Complete distributed computation
+├── 5 Sheep agents for voting consensus
+├── 1 Falcon for synchronization
+└── Constraint: Achieve quorum within 60 seconds
+```
+
+**Key Constraints:** `all-tasks-complete`, `sync-required`, `leader-designated`, `no-collision`
+
+#### Advanced Puzzles 🏆
+Complex multi-stage challenges combining all mechanics:
+```
+Challenge: Build a production-ready agent system
+├── Stage 1: Spatial placement (coverage)
+├── Stage 2: Routing configuration (load balancing)
+├── Stage 3: Breeding optimization (traits)
+└── Constraint: Complete all stages perfectly
+```
+
+**Key Constraints:** `complete-all-subpuzzles`, `resource-limit`, `perfect-chain`
+
+> 📘 **See [Puzzle Format Specification](./docs/PUZZLE_FORMAT.md)** for complete constraint types and puzzle definitions.
+
+### Difficulty Ratings
+
+| Rating | Name | Target Time | XP Range | Example Puzzles |
+|--------|------|-------------|----------|-----------------|
+| ⭐ | Tutorial | 1-2 min | 100-150 | Coverage basics |
+| ⭐⭐ | Beginner | 2-5 min | 150-200 | Triangle formation |
+| ⭐⭐⭐ | Intermediate | 5-10 min | 200-300 | Load balancing |
+| ⭐⭐⭐⭐ | Advanced | 10-20 min | 300-400 | Multi-region routing |
+| ⭐⭐⭐⭐⭐ | Expert | 20+ min | 400-500 | Distributed consensus |
 
 ---
 
@@ -149,16 +195,42 @@ Collision: NO (deterministic)
 
 ### Levels & Unlocks
 
-| Level | Title | Unlocks |
-|-------|-------|---------|
-| 1-4 | Ranch Hand | 🐔 Chickens, Basic puzzles |
-| 5-9 | Drover | 🦆 Ducks, Routing puzzles |
-| 10-14 | Trail Boss | 🐐 Goats, Debug tools |
-| 15-19 | Wrangler | 🐑 Sheep, Consensus puzzles |
-| 20-24 | Rancher | 🐄 Cattle, Heavy reasoning |
-| 25-29 | Overseer | 🐴 Horses, Pipeline automation |
-| 30-34 | Trailblazer | 🦅 Falcons, Multi-node sync |
-| 35+ | Ranch Master | All species, Night School breeding |
+| Level | Title | Unlocks | XP Required |
+|-------|-------|---------|-------------|
+| 1-4 | Ranch Hand | 🐔 Chickens, Basic puzzles | 0 - 1,000 |
+| 5-9 | Drover | 🦆 Ducks, Routing puzzles | 1,000 - 5,000 |
+| 10-14 | Trail Boss | 🐐 Goats, Debug tools | 5,000 - 15,000 |
+| 15-19 | Wrangler | 🐑 Sheep, Consensus puzzles | 15,000 - 30,000 |
+| 20-24 | Rancher | 🐄 Cattle, Heavy reasoning | 30,000 - 50,000 |
+| 25-29 | Overseer | 🐴 Horses, Pipeline automation | 50,000 - 80,000 |
+| 30-34 | Trailblazer | 🦅 Falcons, Multi-node sync | 80,000 - 120,000 |
+| 35+ | Ranch Master | All species, Night School breeding | 120,000+ |
+
+### Scoring System
+
+**Base Score Calculation:**
+```
+Final Score = Base Points × Bonuses × Penalties
+
+Base Points = Puzzle difficulty (1-5) × 100
+```
+
+**Bonuses:**
+| Bonus | Multiplier | Condition |
+|-------|------------|-----------|
+| First Attempt | ×1.5 | Solve on first try |
+| Speed Run | ×1.3 | Complete in <50% time limit |
+| No Hints | ×1.2 | Solve without hints |
+| Perfect Solution | ×1.5 | Optimal solution found |
+| Streak | ×1.1 per win | Consecutive wins (max ×2.0) |
+
+**Penalties:**
+| Penalty | Multiplier | Condition |
+|---------|------------|-----------|
+| Hint Level 1 | ×0.9 | Used basic hint |
+| Hint Level 2 | ×0.75 | Used specific hint |
+| Hint Level 3 | ×0.5 | Used solution hint |
+| Time Exceeded | ×0.8 | Over time limit |
 
 ### Achievements
 
@@ -210,7 +282,7 @@ interface GameAgent {
 
 // Puzzle definition
 interface ConstraintPuzzle {
-  type: 'spatial' | 'routing' | 'breeding';
+  type: 'spatial' | 'routing' | 'breeding' | 'coordination' | 'advanced';
   constraints: Constraint[];
   initialState: GameState;
   goalState: Constraint[];  // Must all be satisfied
@@ -246,11 +318,31 @@ interface ConstraintPuzzle {
 - Learn exact arithmetic vs floating-point approximation
 - Experience multi-agent coordination patterns
 - Practice optimization and resource allocation
+- Apply genetic algorithm concepts through breeding
 
 **Classroom Use:**
 - Works in any browser — no installation needed
 - Progressive difficulty for different skill levels
 - Export agents for real-world applications
+
+### 📚 Educational Value
+
+**CS Concepts Taught:**
+| Concept | How It's Taught | Puzzle Type |
+|---------|-----------------|-------------|
+| Constraint Satisfaction | Position agents to satisfy multiple constraints | Spatial |
+| Load Balancing | Distribute tasks without overloading agents | Routing |
+| Genetic Algorithms | Breed agents with desired traits | Breeding |
+| Distributed Consensus | Coordinate agents for group decisions | Coordination |
+| System Design | Combine all concepts in complex scenarios | Advanced |
+
+**Research Foundations:**
+This game is built on [Constraint Theory](https://github.com/SuperInstance/constraint-theory-core), which enables:
+- **Exact arithmetic**: No floating-point errors in calculations
+- **Deterministic solutions**: Every puzzle has exactly one correct answer
+- **Snapping**: Automatic alignment to valid positions
+
+> 📘 **Learn more:** See [constraint-theory-core](https://github.com/SuperInstance/constraint-theory-core) for the mathematical foundations.
 
 ---
 
@@ -271,13 +363,46 @@ interface ConstraintPuzzle {
 
 ## 🌟 Ecosystem
 
-| Repo | What It Does |
-|------|--------------|
-| **[constraint-theory-core](https://github.com/SuperInstance/constraint-theory-core)** | Rust crate - exact arithmetic |
-| **[constraint-theory-python](https://github.com/SuperInstance/constraint-theory-python)** | Python bindings |
-| **[constraint-ranch](https://github.com/SuperInstance/constraint-ranch)** | This repo - Gamified AI |
-| **[constraint-flow](https://github.com/SuperInstance/constraint-flow)** | Business automation |
-| **[pasture-ai](https://github.com/SuperInstance/pasture-ai)** | Production agent system |
+Constraint Ranch is part of the Constraint Theory ecosystem:
+
+| Repo | What It Does | Connection to Ranch |
+|------|--------------|---------------------|
+| **[constraint-theory-core](https://github.com/SuperInstance/constraint-theory-core)** | Rust crate - exact arithmetic | Powers exact positioning & snapping |
+| **[constraint-theory-python](https://github.com/SuperInstance/constraint-theory-python)** | Python bindings | For analysis and research |
+| **[constraint-ranch](https://github.com/SuperInstance/constraint-ranch)** | This repo - Gamified AI | Learn by playing! |
+| **[constraint-flow](https://github.com/SuperInstance/constraint-flow)** | Business automation | Export agents to workflows |
+| **[pasture-ai](https://github.com/SuperInstance/pasture-ai)** | Production agent system | Deploy trained agents |
+
+### Workflow Integration
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                     CONSTRAINT ECOSYSTEM WORKFLOW                    │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                      │
+│  ┌─────────────────┐     ┌─────────────────┐     ┌───────────────┐  │
+│  │ constraint-     │     │ constraint-     │     │ pasture-ai    │  │
+│  │ theory-core     │────▶│ ranch           │────▶│ (production)  │  │
+│  │ (Rust/WASM)     │     │ (learn & train) │     │               │  │
+│  └─────────────────┘     └─────────────────┘     └───────────────┘  │
+│         │                        │                       │           │
+│         │                        ▼                       │           │
+│         │                 ┌─────────────────┐            │           │
+│         │                 │ constraint-     │────────────┘           │
+│         │                 │ flow            │                        │
+│         │                 │ (automation)    │                        │
+│         │                 └─────────────────┘                        │
+│         │                        │                                   │
+│         ▼                        ▼                                   │
+│  ┌───────────────────────────────────────────────────────────────┐  │
+│  │                   Exact Arithmetic Foundation                   │  │
+│  │   • No floating-point errors                                   │  │
+│  │   • Deterministic solutions                                    │  │
+│  │   • Cross-platform consistency                                 │  │
+│  └───────────────────────────────────────────────────────────────┘  │
+│                                                                      │
+└─────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 

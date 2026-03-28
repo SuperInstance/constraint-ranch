@@ -34,3 +34,30 @@ screenshots/
 - [ ] Agent breeding interface
 - [ ] Leaderboard view
 - [ ] Achievement unlocked modal
+
+## Using Screenshots in Documentation
+
+When adding screenshots to documentation, use this format:
+
+```markdown
+### Gameplay Example
+
+![Spatial Puzzle Example](./assets/screenshots/puzzles/spatial-puzzle-example.png)
+*A spatial puzzle showing optimal agent positioning*
+
+<!-- Placeholder for screenshot -->
+> 📸 **Screenshot needed:** Spatial puzzle showing 3 chickens positioned for 95% coverage
+```
+
+### Screenshot Placeholders
+
+| Screenshot | Location | Description |
+|------------|----------|-------------|
+| `ranch-overview.png` | gameplay/ | Main ranch view with agents |
+| `spatial-puzzle-001.png` | puzzles/ | First spatial puzzle tutorial |
+| `routing-puzzle-001.png` | puzzles/ | Basic load balancing puzzle |
+| `breeding-interface.png` | ui/ | Agent breeding interface |
+| `agent-chicken.png` | agents/ | Chicken agent sprite |
+| `agent-cattle.png` | agents/ | Cattle agent sprite |
+| `leaderboard.png` | ui/ | Global leaderboard view |
+| `achievement-modal.png` | ui/ | Achievement unlock celebration |

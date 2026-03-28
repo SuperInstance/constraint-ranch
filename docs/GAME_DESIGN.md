@@ -4,6 +4,10 @@
 
 Constraint Ranch is a gamified AI ecosystem where players breed, train, and coordinate AI agents through constraint-based puzzles. The game teaches real AI and distributed systems concepts through intuitive, fun gameplay.
 
+> **Related:** [ARCHITECTURE.md](./ARCHITECTURE.md) | [PUZZLE_FORMAT.md](./PUZZLE_FORMAT.md) | [AGENT_SPECIES.md](./AGENT_SPECIES.md)
+>
+> **Ecosystem:** [constraint-theory-core](https://github.com/SuperInstance/constraint-theory-core) | [constraint-flow](https://github.com/SuperInstance/constraint-flow) | [pasture-ai](https://github.com/SuperInstance/pasture-ai)
+
 ---
 
 ## Core Gameplay Pillars
@@ -43,10 +47,40 @@ Offspring Options:
 └── Bias to B:   {polite: 0.65, speed: 0.75}
 ```
 
+**Trait Inheritance Formula:**
+```typescript
+// Offspring trait = weighted average of parents
+offspringTrait = (weightA * parentA.trait) + ((1 - weightA) * parentB.trait)
+
+// Example: 70% weight on parent A for politeness
+polite = (0.7 * 0.9) + (0.3 * 0.6) = 0.81
+```
+
+**Gene Types:**
+| Type | Behavior | Example |
+|------|----------|---------|
+| **Additive** | Weighted average of parents | Speed, accuracy |
+| **Dominant** | Takes value from dominant parent | Fast-response |
+| **Recessive** | Only expresses when both parents contribute | Rare abilities |
+
 **Advanced Features:**
-- Gene dominance/recession
-- Mutation (random trait variation)
-- Night School (trait training beyond genetic limits)
+- **Gene dominance/recession**: Some traits follow Mendelian inheritance
+- **Mutation** (random trait variation): ±0.05 to ±0.15 deviation
+- **Night School** (trait training): Push traits beyond genetic limits (+0.05 to +0.15)
+
+**Cross-Species Breeding:**
+```
+Compatible pairs (within tier or adjacent tiers):
+├── Chicken + Duck = Network Monitor hybrid
+├── Duck + Cattle = Heavy API Processor
+├── Sheep + Horse = Consensus Pipeline
+└── Cattle + Falcon = Distributed Reasoning
+
+Hybrids inherit:
+├── Average size of parents
+├── Combined specialty capabilities
+└── Blended trait ranges
+```
 
 ### 4. Compete 🏆
 Climb leaderboards and earn achievements.

@@ -118,18 +118,33 @@ console.log(`Constraints satisfied: ${solution.satisfied}/${puzzle.constraints.l
 
 ### 1. Agent Species
 
-Each species has unique capabilities:
+Each species has unique capabilities organized into **four tiers**:
 
+#### Tier 1: Starter (Level 1)
 | Species | Icon | Capability | Size | Use Case |
 |---------|------|------------|------|----------|
-| **Chicken** | 🐔 | Monitoring, alerts | Small | Surveillance, early warning |
-| **Duck** | 🦆 | API, network | Medium | Data fetching, webhooks |
-| **Goat** | 🐐 | Debug, navigate | Medium | Code review, exploration |
-| **Cattle** | 🐄 | Heavy reasoning | Large | Complex analysis, decisions |
-| **Sheep** | 🐑 | Consensus voting | Medium | Multi-agent agreement |
-| **Horse** | 🐴 | Pipeline ETL | Large | Data processing |
-| **Hog** | 🐷 | Hardware control | Small | GPIO, sensors |
-| **Falcon** | 🦅 | Multi-node sync | Small | Distributed coordination |
+| **Chicken** | 🐔 | Monitoring, alerts | 5MB | Surveillance, early warning |
+
+#### Tier 2: Network (Level 5-15)
+| Species | Icon | Capability | Size | Use Case |
+|---------|------|------------|------|----------|
+| **Duck** | 🦆 | API, network | 100MB | Data fetching, webhooks |
+| **Goat** | 🐐 | Debug, navigate | 150MB | Code review, exploration |
+| **Sheep** | 🐑 | Consensus voting | 50MB | Multi-agent agreement |
+
+#### Tier 3: Heavy (Level 20-25)
+| Species | Icon | Capability | Size | Use Case |
+|---------|------|------------|------|----------|
+| **Cattle** | 🐄 | Heavy reasoning | 500MB | Complex analysis, decisions |
+| **Horse** | 🐴 | Pipeline ETL | 200MB | Data processing |
+
+#### Tier 4: Specialty (Level 30+)
+| Species | Icon | Capability | Size | Use Case |
+|---------|------|------------|------|----------|
+| **Falcon** | 🦅 | Multi-node sync | 5MB | Distributed coordination |
+| **Hog** | 🐷 | Hardware control | 10MB | GPIO, sensors |
+
+> 📘 **See [Agent Species Documentation](./docs/AGENT_SPECIES.md)** for detailed trait ranges and breeding strategies.
 
 ### 2. Constraint Types
 
@@ -157,6 +172,16 @@ Constraint.implication(a, b);            // If a then b
 ```
 
 ### 3. Puzzle Types
+
+Constraint Ranch features **5 puzzle types** that teach different AI concepts:
+
+| Type | Teaches | Difficulty Range |
+|------|---------|------------------|
+| Spatial | Exact positioning, geometric constraints | 1-5 |
+| Routing | Load balancing, agent specialization | 1-5 |
+| Breeding | Genetic algorithms, optimization | 2-5 |
+| Coordination | Distributed systems, consensus | 3-5 |
+| Advanced | Complex system design | 4-5 |
 
 #### Spatial Puzzles
 
@@ -344,28 +369,56 @@ console.log(`Best genes: ${bestAgents[0].genes}`);
 
 ### Level Structure
 
+| Levels | Title | Unlocks | XP Range |
+|--------|-------|---------|----------|
+| 1-4 | Ranch Hand | 🐔 Chickens, Basic spatial puzzles | 0 - 1,000 |
+| 5-9 | Drover | 🦆 Ducks, Routing puzzles | 1,000 - 5,000 |
+| 10-14 | Trail Boss | 🐐 Goats, Debug tools | 5,000 - 15,000 |
+| 15-19 | Wrangler | 🐑 Sheep, Consensus puzzles | 15,000 - 30,000 |
+| 20-24 | Rancher | 🐄 Cattle, Heavy reasoning | 30,000 - 50,000 |
+| 25-29 | Overseer | 🐴 Horses, Pipeline automation | 50,000 - 80,000 |
+| 30-34 | Trailblazer | 🦅 Falcons, Multi-node sync | 80,000 - 120,000 |
+| 35+ | Ranch Master | All species, Night School | 120,000+ |
+
+### Level Themes
+
 ```
-Level 1-3:   "First Steps"
+Level 1-4:   "First Steps"
 ├── 3 chicken agents
 ├── Basic spatial puzzles
 └── Learn: constraint basics, snapping
 
-Level 4-6:   "Duck Pond"
+Level 5-9:   "Duck Pond"
 ├── Unlock duck agents
 ├── Routing puzzles
 └── Learn: geometric routing, API handling
 
-Level 7-10:  "Cattle Drive"
+Level 10-14:  "Goat Trails"
+├── Unlock goat agents
+├── Debug puzzles
+└── Learn: navigation, error detection
+
+Level 15-19: "Sheep Meadow"
+├── Unlock sheep agents
+├── Consensus puzzles
+└── Learn: distributed voting, coordination
+
+Level 20-24: "Cattle Drive"
 ├── Unlock cattle agents
-├── Complex multi-agent puzzles
-└── Learn: coordination, consensus
+├── Complex reasoning puzzles
+└── Learn: heavy analysis, optimization
 
-Level 11-15: "Breeding Ground"
-├── Unlock breeding
-├── Trait optimization puzzles
-└── Learn: genetics, evolution
+Level 25-29: "Horse Corral"
+├── Unlock horse agents
+├── Pipeline puzzles
+└── Learn: ETL, data flow
 
-Level 16-20: "Ranch Master"
+Level 30-34: "Falcon's Nest"
+├── Unlock falcon agents
+├── Multi-node puzzles
+└── Learn: distributed sync
+
+Level 35+:   "Ranch Master"
 ├── All species unlocked
 ├── Night School access
 └── Learn: advanced optimization, meta-constraints
@@ -613,15 +666,16 @@ main();
 
 ### Documentation
 
-- [Game Design](./docs/GAME_DESIGN.md)
-- [Puzzle Format](./docs/PUZZLE_FORMAT.md)
-- [Agent Species](./docs/AGENT_SPECIES.md)
-- [Architecture](./docs/ARCHITECTURE.md)
+- [Game Design](./docs/GAME_DESIGN.md) - Game mechanics and progression
+- [Puzzle Format](./docs/PUZZLE_FORMAT.md) - Puzzle definitions and constraints
+- [Agent Species](./docs/AGENT_SPECIES.md) - Species details and traits
+- [Architecture](./docs/ARCHITECTURE.md) - Technical implementation
 
-### Related
+### Ecosystem
 
-- [constraint-theory-core](https://github.com/SuperInstance/constraint-theory-core)
-- [constraint-flow](https://github.com/SuperInstance/constraint-flow)
+- [constraint-theory-core](https://github.com/SuperInstance/constraint-theory-core) - Exact arithmetic foundation (Rust/WASM)
+- [constraint-flow](https://github.com/SuperInstance/constraint-flow) - Business automation workflows
+- [pasture-ai](https://github.com/SuperInstance/pasture-ai) - Production agent deployment
 
 ---
 

@@ -675,7 +675,7 @@ export const nightSchoolMasterChallenge: AdvancedPuzzle = {
       { id: 'falcon-elite-4', species: 'falcon', position: { x: 500, y: 500 }, traits: new Map([['intelligence', 0.95], ['coordination', 0.92]]) },
       { id: 'falcon-elite-5', species: 'falcon', position: { x: 300, y: 300 }, traits: new Map([['intelligence', 0.98], ['coordination', 0.95]]) }
     ],
-    resources: { training: 100, sync-precision: 1 },
+    resources: { training: 100, 'sync-precision': 1 },
     globalConstraints: [
       { type: 'night-school-certified', value: true },
       { type: 'master-level', value: true }
